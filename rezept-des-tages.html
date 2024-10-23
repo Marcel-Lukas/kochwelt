@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="de">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Veganes Chili sin Carne: ein gesundes, proteinreiches Rezept, das in nur 30 Minuten zubereitet ist. Perfekt für ein herzhaftes Abendessen.">
+    <meta name="keywords" content="Chili sin Carne, vegane Rezepte, gesundes Essen, proteinreich, schnelles Rezept, veganes Chili">    
+    <meta name="author" content="Marcel Lukas">
+    <link rel="icon" type="image/png" href="./src/img/favicons/favicon-48x48.png" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="./src/img/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="./src/img/favicons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/img/favicons/apple-touch-icon.png" />
+    <link rel="manifest" href="./src/img/favicons/site.webmanifest" />
+    <title>Rezept des Tages</title>
+    <link rel="stylesheet" type="text/css" href="./src/css/styles.css">
+    <script src="src/js/script-des-tages.js"></script>
+  </head>
+
+  <body>
+
+    <header>
+
+      <div class="header-content row">
+
+        <div id="header-left" >
+          <a href="index.html">
+            <img src="src/img/logo.png" alt="Kochwelt Logo" />
+          </a>
+        </div>
+
+        <nav id="header-right">
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li class="activ"><a href="rezept-des-tages.html">Rezept des Tages</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+          </ul>
+        </nav>
+
+      </div>
+    </header>
+
+    <section id="recipe-head">
+
+      <div class="row">
+        
+        <div class="recipe-scheme">
+          <h1>Vegane Chili sin Carne</h1>
+          <img src="src/img/rezept-des-tages.png" alt="Chili sin Carne">
+
+          <div id="description-container">
+            <div class="description-box">
+              <img class="description-icon"
+                src="./src/img/icons/clock-regular.svg" alt="Uhr"/>
+              <span>30 Min.</span>
+            </div>
+            <div class="description-box">
+              <img class="description-icon"
+                src="./src/img/icons/brain-solid.svg" alt="Schwierigkeitsgrad"/>
+              <span>simpel</span>
+            </div>
+            <div class="description-box">
+              <img class="description-icon"
+                src="./src/img/icons/calendar-alt-regular.svg" alt="Kalender"/>
+              <span>23.10.2024</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+ 
+
+    <section id="calculator">
+
+      <div class="row" ><div class="line"></div>
+
+        <div class="portion-input-container">
+          <label>Zutaten für</label>
+          <div id="input-btn-field" >
+            <input type="number" id="servings" min="1" max="10" step="1" value="4"/>
+            <button class="btn" type="submit" onclick="calculatePortions()">Portionen</button>
+          </div>
+        </div>
+
+        <table id="table">
+          <tr>
+            <td>
+              <span id="amount1">250</span><span> g Kidneybohnen (Konserve), abgetropft</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span id="amount2">2</span><span> Paprika rot, grob gewürfelt</span>
+            </td>
+          </tr>
+          <tr>
+            <td><span id="amount3">50</span><span> g rote Linsen</span></td>
+          </tr>
+          <tr>
+            <td><span id="amount4">75</span><span> g feine Sojaschnetzel</span></td>
+          </tr>
+          <tr>
+            <td><span id="amount5">100</span><span> g Tomatenmark</span></td>
+          </tr>
+          <tr>
+            <td><span id="amount6">150</span><span> g Mais (Konserve)</span></td>
+          </tr>
+          <tr>
+            <td><span id="amount7">1</span><span> Knoblauchzehe, gehackt</span></td>
+          </tr>
+          <tr>
+            <td><span id="amount8">1</span><span> Teelöfel Paprikapulver</span></td>
+          </tr>
+          <tr>
+            <td>
+              <span id="amount9">1</span><span> Teelöfel getrockneter Oregano</span>
+            </td>
+          </tr>
+          <tr>
+            <td><span id="amount10">0.5</span><span> Teelöfel Salz</span></td>
+          </tr>
+          <tr>
+            <td>
+              <span id="amount11">1</span><span> Prise Cayenpfeffer</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span id="amount12">500</span><span> ml Wasser</span>
+            </td>
+          </tr>
+        </table>
+
+      </div>
+
+    </section>
+
+
+    <section id="preparation">
+
+      <div class="row" >
+
+        <div class="preparation-container" >
+          <h2>Zubereitung</h2>
+          <div class="time-rating" >
+            <div class="description-box">
+              <img class="description-icon"
+                src="./src/img/icons/clock-regular.svg" alt="Uhr"/>
+              <span>ca. 10 Minuten</span>
+            </div>
+            <div class="description-box">
+              <img class="description-icon"
+                src="./src/img/icons/clock-regular.svg" alt="Uhr"/>
+              <span>Garzeit ca. 20 Minuten</span>
+            </div>
+          </div>
+          <div id="preparation-text">
+            Ideal für schnelle und einfache Zubereitung, meine One-Pot-Wok-Methode:
+            Einfach alle Zutaten in eine tiefe Pfanne oder, noch besser, in einen Wok geben.
+            Für etwa 20 Minuten bei mittlerer Hitze kochen, dabei regelmäßig umrühren.
+            Mein Tipp für noch mehr Tempo: Erhitze das Wasser vorher im Wasserkocher.<br>
+            Guten Appetit!
+          </div>
+
+          <div id="writer-container" >
+            <h3>Rezept erstellt von</h3>
+            <div id="writer">
+              <img src="src/img/profilbilder/marcel.JPG" alt="Profilbild">
+              <p>Marcel Lukas</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  
+
+
+
+
+
+
+
+    <footer>
+      <div class="row">
+
+        <div class="icon-container" >
+          <a href="index.html">
+            <img id="footer-png" src="src/img/logo.png" alt="Kochwelt Logo" />
+          </a>
+
+          <div>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+              <img class="icon" src="src/img/facebook_logo.png" alt="Facebook Logo" />
+            </a>
+  
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+              <img class="icon" src="src/img/instagrram_logo.png" alt="Instagram Logo" />
+            </a>
+  
+            <a href="https://www.x.com/" target="_blank" rel="noopener noreferrer">
+              <img class="icon" src="src/img/twitter_logo.png" alt="Twitter Logo" />
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </footer>
+      <script>
+        document.addEventListener("touchstart", function(){}, true);
+      </script>
+  </body>
+
+</html>
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./src/img/favicons/favicon-48x48.png" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="./src/img/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="./src/img/favicons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/img/favicons/apple-touch-icon.png" />
+    <link rel="manifest" href="./src/img/favicons/site.webmanifest" />
+    <title>Kontakt</title>
+    <link rel="stylesheet" type="text/css" href="./src/css/styles.css">
+
+  </head>
+
+  <body>
+
+    <header>
+
+      <div class="header-content row">
+
+        <div id="header-left" >
+          <a href="index.html">
+            <img src="src/img/logo.png" alt="Kochwelt Logo" />
+          </a>
+        </div>
+
+        <nav id="header-right">
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="rezept-des-tages.html">Rezept des Tages</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+          </ul>
+        </nav>
+
+      </div>
+
+    </header>
+
+    
+    <main id="mail-send">
+      <div class="row">
+        <div id="text-container">
+          <div id="mail-send-text">
+            <p>Deine Mail wurde versendet</p>
+            <img class="animate-letter" src="src/img/letter.png" alt="Briefumschlag">
+            <div id="back-btn">
+              <a href="index.html" class="btn">Zurück</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    
+    
+    <footer>
+      <div class="row">
+
+        <div class="icon-container" >
+          <a href="index.html">
+            <img id="footer-png" src="src/img/logo.png" alt="Kochwelt Logo" />
+          </a>
+
+          <div>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+              <img class="icon" src="src/img/facebook_logo.png" alt="Facebook Logo" />
+            </a>
+  
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+              <img class="icon" src="src/img/instagrram_logo.png" alt="Instagram Logo" />
+            </a>
+  
+            <a href="https://www.x.com/" target="_blank" rel="noopener noreferrer">
+              <img class="icon" src="src/img/twitter_logo.png" alt="Twitter Logo" />
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </footer>
+      <script>
+        document.addEventListener("touchstart", function(){}, true);
+      </script>
+      <script>
+        window.addEventListener('load', () => {
+            const logo = document.querySelector('.animate-letter');
+            logo.classList.add('loaded-letter');
+        });
+      </script>
+  </body>
+
+</html>
+

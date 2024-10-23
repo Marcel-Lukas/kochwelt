@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kontaktiere uns für Fragen, Anregungen oder Feedback zu unseren Rezepten und der Website. Wir freuen uns auf deine Nachricht!">
+    <meta name="keywords" content="Kontakt, Fragen, Anregungen, Feedback, Rezepte, Kochwelt">    
+    <meta name="author" content="Marcel Lukas">
+    <link rel="icon" type="image/png" href="./src/img/favicons/favicon-48x48.png" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="./src/img/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="./src/img/favicons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/img/favicons/apple-touch-icon.png" />
+    <link rel="manifest" href="./src/img/favicons/site.webmanifest" />
+    <title>Kontakt</title>
+    <link rel="stylesheet" type="text/css" href="./src/css/styles.css">
+
+  </head>
+
+  <body>
+
+    <header>
+
+      <div class="header-content row">
+
+        <div id="header-left" >
+          <a href="index.html">
+            <img src="src/img/logo.png" alt="Kochwelt Logo" />
+          </a>
+        </div>
+
+        <nav id="header-right">
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="rezept-des-tages.html">Rezept des Tages</a></li>
+            <li class="activ"><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+          </ul>
+        </nav>
+
+      </div>
+
+    </header>
+
+
+      <section id="contact">
+
+        <form onsubmit="sendMail(event)">
+
+          <div id="contact-container">
+
+            <div>
+  
+              <h3>Kontaktiere uns:</h3>
+  
+              <div class="input-area">
+                <p>Name:</p>
+                <input class="iput" type="text" name="Name" required/>
+              </div>
+  
+              <div class="input-area">
+                <p>E-Mail:</p>
+                <input class="iput" type="email" name="E-Mail" required/>
+              </div>
+  
+              <div class="input-area">
+                <p>Nachricht:</p>
+                <textarea class="height-input" name="Message" required></textarea>
+              </div>
+              <div id="contact-btn-container">
+                <button class="btn" >Absenden</button>
+              </div>
+  
+            </div>
+
+          </div>
+
+        </form>
+
+      </section>
+
+    
+    
+    <footer>
+      <div class="row">
+
+        <div class="icon-container" >
+          <a href="index.html">
+            <img id="footer-png" src="src/img/logo.png" alt="Kochwelt Logo" />
+          </a>
+
+          <div>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+              <img class="icon" src="src/img/facebook_logo.png" alt="Facebook Logo" />
+            </a>
+  
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+              <img class="icon" src="src/img/instagrram_logo.png" alt="Instagram Logo" />
+            </a>
+  
+            <a href="https://www.x.com/" target="_blank" rel="noopener noreferrer">
+              <img class="icon" src="src/img/twitter_logo.png" alt="Twitter Logo" />
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </footer>
+      <script>
+        document.addEventListener("touchstart", function(){}, true);
+      </script>
+      <script>
+        function sendMail(event){
+            event.preventDefault();
+            const data = new FormData(event.target);
+
+            fetch("https://formspree.io/f/xzzbbner", {
+                method: "POST",
+                body: new FormData(event.target),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(() => {
+                window.location.href = "./send-mail.html";
+            }).catch((error) => {
+                console.log(error);
+            });
+        }
+      </script>
+  </body>
+
+</html>
+

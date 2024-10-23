@@ -1,0 +1,678 @@
+/* Fonts */
+
+/* raleway-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/raleway-v29-latin-regular.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/raleway-v29-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/raleway-v29-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+         url('../fonts/raleway-v29-latin-regular.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+         url('../fonts/raleway-v29-latin-regular.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+         url('../fonts/raleway-v29-latin-regular.svg#Raleway') format('svg'); /* Legacy iOS */
+  }
+  
+  /* raleway-italic - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Raleway';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../fonts/raleway-v29-latin-italic.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/raleway-v29-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/raleway-v29-latin-italic.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+         url('../fonts/raleway-v29-latin-italic.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+         url('../fonts/raleway-v29-latin-italic.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+         url('../fonts/raleway-v29-latin-italic.svg#Raleway') format('svg'); /* Legacy iOS */
+  }
+  
+  /* raleway-700 - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/raleway-v29-latin-700.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/raleway-v29-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/raleway-v29-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+         url('../fonts/raleway-v29-latin-700.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+         url('../fonts/raleway-v29-latin-700.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+         url('../fonts/raleway-v29-latin-700.svg#Raleway') format('svg'); /* Legacy iOS */
+  }
+  
+  /* raleway-700italic - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Raleway';
+    font-style: italic;
+    font-weight: 700;
+    src: url('../fonts/raleway-v29-latin-700italic.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/raleway-v29-latin-700italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/raleway-v29-latin-700italic.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+         url('../fonts/raleway-v29-latin-700italic.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+         url('../fonts/raleway-v29-latin-700italic.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+         url('../fonts/raleway-v29-latin-700italic.svg#Raleway') format('svg'); /* Legacy iOS */
+  }
+
+/* Global */
+
+/* Farbe Variablen */
+:root {
+    --grün: #008000;
+    --grau-h: #EFEFEF;
+    --grau-d: #D3D3D3;
+    --schwarz-h: #232323;
+    --schwarz: #000000;
+    --white: #ffffff;
+    --white-d: #fdfdfd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.row {
+    width: 80vw;
+    max-width: 1920px;
+}
+
+/* Header */
+
+header {
+    box-shadow: 0 4px 8px -2px var(--grau-d);
+    display: flex;
+    justify-content: center;
+  }
+
+.header-content {
+    height: 128px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#header-left {
+    display: flex;
+    align-items: center;
+}
+
+#header-left img {
+    height: 96px;
+    transition: transform 777ms ease-in-out;
+}
+
+.loaded {
+    transform: rotatey(360deg);
+}
+
+#header-left img:hover {
+    cursor: pointer;
+    transform: scale(105%);
+    filter: drop-shadow(0px 0px 10px var(--schwarz-h));
+}
+
+#header-right {
+    display: flex;
+    align-items: flex-end;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    padding-bottom: 14px;
+}
+
+#header-right ul > li > a {
+    padding-left: 32px;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--schwarz);
+}
+
+#header-right ul > li > a:link {
+    color: var(--schwarz);
+    text-decoration: none;
+}
+
+#header-right ul > li > a:visited {
+    color: var(--schwarz);
+    text-decoration: none;
+}
+
+#header-right ul > li > a:active{
+    color: var(--schwarz);
+    text-decoration: none; 
+}
+
+#header-right ul > li > a:hover {
+    cursor: pointer;
+    color: var(--grün);
+    filter: drop-shadow(0px 4px 24px var(--grün));
+
+}
+
+#header-right ul > li.activ > a {
+    color: var(--grün);
+    text-decoration: underline;
+    text-decoration-thickness: 6px;
+    text-underline-offset: 13px;
+}
+
+
+/* Hero Section */
+
+.hero-rezept {
+    display: flex;
+    justify-content: center;
+    padding-top: 88px;
+    padding-bottom: 88px;
+}
+
+#hero-container {
+    display: flex;
+}
+
+.hero-rezept img {
+    width: 560px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: ease-in-out 222ms;
+}
+
+.hero-rezept img:hover {
+    cursor: pointer;
+    transform: scale(97%);
+    box-shadow: 0px 0px 8px var(--schwarz-h);
+}
+
+.text-container {
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 48px;
+    h1 {
+        font-size: 36px;
+        padding-bottom: 24px;
+    }
+    span {
+        font-size: 24px;
+    }
+}
+
+
+.btn-container {
+    padding-bottom: 56px;
+    transition: ease-in-out 222ms;
+}
+
+.btn {
+    align-items: end;
+    background-color: var(--grün);
+    color: var(--white);
+    text-decoration: none;
+    padding: 12px 48px;
+    border-radius: 4px;
+    font-size: 22px;
+    transition: ease-in-out 222ms;
+}
+
+.btn:hover {
+    cursor: pointer;
+    text-shadow: 2px 2px 2px var(--schwarz);
+}
+
+.btn-container:hover {
+    filter: drop-shadow(0px 0px 2px #025802);
+}
+
+/* Lust auf was Neus Section */
+
+.neue-rezepte-section {
+    background-color: var(--grau-h);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.neue-rezepte-section h2 {
+    font-size: 36px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+#new-recipe img {
+    height: 320px;
+    width: 320px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: ease-in-out 222ms;
+}
+
+#new-recipe img:hover {
+    cursor: pointer;
+    transform: scale(97%);
+    box-shadow: 0px 0px 8px var(--schwarz-h);
+}
+
+#new-recipe {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 88px;
+}
+
+#new-recipe p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.box p {
+    display: flex;
+    justify-content: center;
+}
+
+.box:hover {
+    p {
+    color: var(--grün);
+    text-shadow: 0px 0px 12px var(--white);
+    }
+}
+
+/* Was ist besser Discussion */
+
+.discussion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+}
+
+.discussion h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+    padding-top: 40px;
+    padding-bottom: 48px;
+}
+
+#wok-discussion {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 120px;
+    img {
+        height: 320px;
+        width: 320px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+    span {
+        font-size: 24px;
+        padding-right: 48px;
+        padding-top: 24px;
+    }
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--schwarz-h);
+    height: 128px;
+}
+
+#footer-png {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(90deg) brightness(100%) contrast(100%);
+    width: 220px;
+}
+
+.icon {
+    height: 46px;
+    padding-left: 16px;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-container img {
+    transition: 222ms ease-in-out;
+}
+
+.icon-container img:hover {
+    transform: scale(111%);
+    filter: drop-shadow(0px 0px 4px var(--white));
+}
+
+
+/* Rezept des Tages Seite */
+
+#recipe-head {
+    display: flex;
+    justify-content: center;
+}
+
+.recipe-scheme h1 {
+    padding-top: 80px;
+    padding-bottom: 32px;
+    font-size: 36px;
+}
+
+.recipe-scheme img {
+    width: 100%;
+    height: 240px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+#description-container {
+    padding-top: 32px;
+    padding-bottom: 80px;
+    display: flex;
+    gap: 24px;
+  }
+  
+  .description-box {
+    background-color: var(--grau-h);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 10px;
+    border-radius: 12px;
+    gap: 10px;
+    span {
+        font-size: 22px;
+    }
+  }
+
+  #description-container .description-icon {
+    width: 16px;
+    height: 16px;
+    border-radius: 0;
+  }
+
+
+  /* Rezept des Tages Seite - Calculator Section */
+
+.line {
+    height: 2px;
+    width: 100%;
+    background-color: var(--grau-h);
+}
+
+#calculator {
+    display: flex;
+    justify-content: center;
+}
+
+button {            /* User-Agent-Stylesheet Button reset: */
+    all: unset;
+    display: inline-block;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    text-align: inherit;
+    text-transform: none;
+    letter-spacing: normal;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.portion-input-container {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    label {
+        font-size: 22px;
+        padding-right: 22px;
+    }
+}
+
+input {
+    margin-right: -4px;
+    padding: 8px;
+    padding-bottom: 12px;
+    font-size: 20px;
+    border: 1px solid var(--grau-d);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    width: 222px;
+    height: 50px;
+    outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    background-color: var(--grau-d);
+    height: 50px;
+}
+
+#input-btn-field {
+    display: flex;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+}
+
+tr {
+    height: 56px;
+}
+
+table tr:nth-of-type(odd) {
+    background-color: var(--grau-h);
+}
+  
+td {
+    font-size: 20px;
+    padding-left: 40px;
+    border-radius: 8px;
+}
+
+
+/* Rezept des Tages Seite- Zubereitung Section */
+
+#preparation {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 32px;
+}
+
+.description-box {
+    background-color: var(--grau-h);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 10px;
+    border-radius: 12px;
+    gap: 10px;
+    span {
+        font-size: 20px;
+    }
+  }
+
+ .preparation-container .description-icon {
+    width: 16px;
+    height: 16px;
+    border-radius: 0;
+  }
+
+  .time-rating {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: flex;
+    gap: 24px;
+  }
+
+#preparation-text {
+    max-width: 800px;
+    font-size: 20px;
+}
+
+#writer-container {
+    padding-top: 40px;
+    h3 {
+        font-size: 22px;
+        padding-bottom: 22px;
+    }
+}
+
+#writer {
+    display: flex;
+    align-items: center;
+    p {
+        font-size: 22px;
+        padding-left: 28px;
+    }
+}
+
+  #writer img {
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+/* Kontakt Seite */
+
+#contact {
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#contact-container {
+    padding: 48px;
+    border-radius: 18px;
+    background-color: var(--grau-d);
+    box-shadow: 0px 0px 4px var(--schwarz-h);
+    h3 {
+        font-size: 24px;
+        padding-bottom: 24px;
+    }
+    p {
+        padding-bottom: 8px;
+        font-size: 18px;
+    }
+}
+
+.input-area {
+    padding-bottom: 40px;
+}
+  
+.iput {
+    border-radius: 8px;
+    width: 440px;
+    padding-left: 8px;
+    font-size: 16px;
+}
+
+.iput:active {
+    border: solid 2px var(--schwarz-h);
+}
+
+.height-input {
+    height: 220px;
+    width: 440px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 8px;
+}
+
+.height-input:active {
+    border: solid 2px var(--schwarz-h);
+}
+
+#contact-btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Impressum Seite */
+
+#impressum {
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    font-size: 16px;
+    h1, h2 {
+        text-decoration: underline;
+        font-size: 32px;
+        padding-bottom: 16px;
+    }
+    h3 {
+        font-size: 24px;
+        padding-bottom: 8px;
+        padding-top: 16px;
+    }
+}
+
+#impressum-text-container {
+    padding: 80px;
+    border-radius: 16px;
+    background-color: var(--grau-h);
+    box-shadow: 0px 0px 4px var(--schwarz-h);
+}
+
+/* Hidden send-mail.html Seite */
+
+#mail-send {
+    display: flex;
+    justify-content: center;
+}
+
+#text-container {
+    display: flex;
+    justify-content: center;
+}
+
+#mail-send-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 536px;
+    height: 730px;
+    border-radius: 16px;
+    background-color: var(--grau-d);
+    box-shadow: 0px 0px 4px var(--schwarz-h);
+    margin-top: 80px;
+    margin-bottom: 56px;
+    p {
+        font-size: 24px;
+    }
+    img {
+        margin-top: 16px;
+        height: 80px;
+    }
+}
+
+#back-btn {
+    padding-top: 40px;
+}
+
+.animate-letter {
+    transition: transform 1111ms ease-in-out;
+}
+
+.loaded-letter {
+    transform: rotateY(180deg) rotateZ(360deg) rotateX(360deg);
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="de">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Schnelles Rezept für Couscous mit Erbsen und Tofu. Lecker, gesund und einfach in nur 20 Minuten zubereitet.">
+    <meta name="keywords" content="Couscous, Erbsen, Tofu, einfache Rezepte, vegane Rezepte, gesundes Essen, schnelles Rezept">    
+    <meta name="author" content="Marcel Lukas">
+    <link rel="icon" type="image/png" href="./src/img/favicons/favicon-48x48.png" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="./src/img/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="./src/img/favicons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/img/favicons/apple-touch-icon.png" />
+    <link rel="manifest" href="./src/img/favicons/site.webmanifest" />
+    <title>Couscous mit Erbsen & Tofu</title>
+    <link rel="stylesheet" type="text/css" href="./src/css/styles.css">
+    <script src="src/js/script-3.js"></script>
+  </head>
+
+  <body>
+
+    <header>
+
+      <div class="header-content row">
+
+        <div id="header-left" >
+          <a href="index.html">
+            <img src="src/img/logo.png" alt="Kochwelt Logo" />
+          </a>
+        </div>
+
+        <nav id="header-right">
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="rezept-des-tages.html">Rezept des Tages</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+          </ul>
+        </nav>
+
+      </div>
+    </header>
+
+    <section id="recipe-head">
+
+      <div class="row">
+        
+        <div class="recipe-scheme">
+          <h1>Couscous mit Erbsen & Tofu</h1>
+          <img src="src/img/rezept3.jpg" alt="Couscous mit Erbsen & Tofu">
+
+          <div id="description-container">
+            <div class="description-box">
+              <img class="description-icon"
+                src="./src/img/icons/clock-regular.svg" alt="Uhr"/>
+              <span>20 Min.</span>
+            </div>
+            <div class="description-box">
+              <img class="description-icon"
+                src="./src/img/icons/brain-solid.svg" alt="Schwierigkeitsgrad"/>
+              <span>simpel</span>
+            </div>
+            <div class="description-box">
+              <img class="description-icon"
+                src="./src/img/icons/calendar-alt-regular.svg" alt="Kalender"/>
+              <span>23.10.2024</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+ 
+
+    <section id="calculator">
+
+      <div class="row" ><div class="line"></div>
+
+        <div class="portion-input-container">
+          <label>Zutaten für</label>
+          <div id="input-btn-field" >
+            <input type="number" id="servings" min="1" max="10" step="1" value="4"/>
+            <button class="btn" type="submit" onclick="calculatePortions()">Portionen</button>
+          </div>
+        </div>
+
+        <table id="table">
+          <tr>
+            <td>
+              <span id="amount1">200</span><span> g Couscous</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span id="amount2">200</span><span> g Erbsen (Tiefkühl)</span>
+            </td>
+          </tr>
+          <tr>
+            <td><span id="amount3">2</span><span> Frühlingszwiebeln, gehackt</span></td>
+          </tr>
+          <tr>
+            <td><span id="amount4">2</span><span> Esslöfel Olivenöl</span></td>
+          </tr>
+          <tr>
+            <td><span id="amount5">200</span><span> g Tofu (geräuchert), in kleine Würfel geschnitten</span></td>
+          </tr>
+          <tr>
+            <td><span id="amount6">1</span><span> Handvoll Petersilie, gehackt</span></td>
+          </tr>
+          <tr>
+            <td><span id="amount7">0.5</span><span> Teelöfel Salz</span></td>
+          </tr>
+          <tr>
+            <td><span id="amount8">400</span><span> ml kochendes Wasser</span></td>
+          </tr>
+          <tr>
+            <td>
+              <span> Etwas Abrieb von Bio-Zitrone</span>
+            </td>
+          </tr>
+        </table>
+
+      </div>
+
+    </section>
+
+
+    <section id="preparation">
+
+      <div class="row" >
+
+        <div class="preparation-container" >
+          <h2>Zubereitung</h2>
+          <div class="time-rating" >
+            <div class="description-box">
+              <img class="description-icon"
+                src="./src/img/icons/clock-regular.svg" alt="Uhr"/>
+              <span>ca. 5 Minuten</span>
+            </div>
+            <div class="description-box">
+              <img class="description-icon"
+                src="./src/img/icons/clock-regular.svg" alt="Uhr"/>
+              <span>Garzeit ca. 15 Minuten</span>
+            </div>
+          </div>
+          <div id="preparation-text">
+            Ideal für schnelle und einfache Zubereitung, meine One-Pot-Wok-Methode:
+            Alle Zutaten in der Pfanne aufkochen, 3 Minuten köcheln und noch 10 Minuten auf
+            dem ausgeschalteten Herd mit einem dicht schließenden Deckel ruhen lassen.<br>
+            Guten Appetit!
+          </div>
+
+          <div id="writer-container" >
+            <h3>Rezept erstellt von</h3>
+            <div id="writer">
+              <img src="src/img/profilbilder/marcel.JPG" alt="Profilbild">
+              <p>Marcel Lukas</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  
+
+
+
+
+
+
+
+    <footer>
+      <div class="row">
+
+        <div class="icon-container" >
+          <a href="index.html">
+            <img id="footer-png" src="src/img/logo.png" alt="Kochwelt Logo" />
+          </a>
+
+          <div>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+              <img class="icon" src="src/img/facebook_logo.png" alt="Facebook Logo" />
+            </a>
+  
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+              <img class="icon" src="src/img/instagrram_logo.png" alt="Instagram Logo" />
+            </a>
+  
+            <a href="https://www.x.com/" target="_blank" rel="noopener noreferrer">
+              <img class="icon" src="src/img/twitter_logo.png" alt="Twitter Logo" />
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </footer>
+      <script>
+        document.addEventListener("touchstart", function(){}, true);
+      </script>
+  </body>
+
+</html>
+
